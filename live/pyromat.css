@@ -5,25 +5,21 @@
     --pyro-orange: #ef5423;
     --pyro-black: #000000;
     --pyro-gray: #f0f0f0;
+
+    font-size: 16px;
+    font-family: 'sans-serif';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec; 
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
 }
 
-.section {
-    margin: 0px 30px 0px 30px;
-    text-align:justify;
-}
+
 
 /* Section header font definitions
  *  Use the "title" or "subtitle" class to encase in a boarder
  */
-h1 {
-    font-size: 24pt;
-    font-family:sans-serif;
-}
 
-h2 {
-    font-size: 24pt;
-    font-family:sans-serif;
-}
 
 /* Start with some generic formatting for text elements
  */
@@ -38,33 +34,30 @@ h2 {
  */
 .title {
     text-align:center;
-    /* background-color: var(--pyro-black, black); */
-    /* background-color: #00005f; */
     background-color: white;
     border: 3px solid var(--pyro-black, black);
     border-radius: 40px;
-    /* color: white; */
     color: black;
     font-family: Arial, sans-serif;
-    padding: 10px;
-    margin: 0px 0px 50px 0px;
+    margin-bottom: 30px;
 }
 
 .subtitle {
-    text-align:center;
+    text-align: center;
     border: 3px solid var(--pyro-black, black);
     border-radius: 40px;
     color: var(--pyro-black, black);
     font-family: Arial, sans-serif;
     padding: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 20px;
 }
 
+/* IDK what these do 
 .tagline {
-    text-align:center;
-    font-family:sans;
+    text-align: center;
+    font-family: sans-serif;
     font-size:18px;
     margin:auto;
     margin-top:100px;
@@ -106,9 +99,8 @@ h2 {
 }
 
 .code {
-    /*background-color: #ffeebb;*/
     background-color: var(--pyro-gray, gray);
-    margin-top:5;
+    margin-top: 5;
     margin-bottom:5;
     padding: 10px;
     font-family:Monospace;
@@ -123,7 +115,6 @@ h2 {
 }
 
 span.code{
-    /*background-color: #ffeebb;*/
     background-color: var(--pyro-gray, gray);
     margin-top:0;
     margin-bottom:0;
@@ -161,28 +152,55 @@ a:hover {
 /*  Default screen layout assumes a narrow screen.
  * it will probably print well too.
  */
+
+
 body {
-    margin: 0 0 0 0;
+    color: black;
+    background-color:white;
+    margin: 0; 
+    padding: 0;
 }
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
 
 #content {
-    width:90%;
-    text-align:justify;
+    width: 100%;
+    text-align: justify;
     line-height: 1.5;
-    position:static;
-    padding:0 0 0 0;
-    margin:10px 10px 0 10px;
-    border:none;
+    position: static;
+    padding: 0 0 0 0;
+    border: none;
 }
 
+/*
 #contact {
-    text-align:center;
-    font-size:80%;
-    border:none;
-    width:95%;
+    text-align: center;
+    font-size: 80%;
+    border: none;
+    width: 95%;
 }
-/* REMINDER... this is the NARROW layout
- */
+*/
+
+/* REMINDER... this is the NARROW layout */
+
+/*
 #menulist {
     list-style-type: none;
     font-family:Arial,sans-serif;
@@ -191,10 +209,13 @@ body {
     margin: 0;
     width: 100%;
     position: static;
-    top: 0;left:0;
+    top: 0; left: 0;
     background-color:black;
     color:white;
 }
+*/
+
+/*
 li.icon {
     display:inline;
     text-align:left;
@@ -216,9 +237,9 @@ li.menuitem a:hover{
     background-color:#777;
     color:white;
 }
+*/
+/* If the screen is wide, then we can use a more spacious layout. */
 
-/* If the screen is wide, then we can use a more spacious layout.
- */
 @media screen and (min-width: 1030px) {
 
     /* Page Layout
@@ -228,19 +249,36 @@ li.menuitem a:hover{
      * width.  The contact is a footer at the bottom of the content
      * separated by a horizontal rule.
      */
-    body {
-        margin-top: 0px;
+     body {
+        color: black;
+        background-color:white;
+        margin: 0; 
+        padding: 0;
+    }
+    
+    body::-webkit-scrollbar {
+        width: 0.25rem;
+    
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: #1e1e24;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: #6649b8;
+    }
+    
+    main {
+        margin-left: 5rem;
+        padding: 1rem;
     }
 
     #content {
-        width:850px;
-        text-align:justify;
-        position:absolute;
-        top:0;
-        left:150px;
-        padding:0;
-        margin:10px;
-        border:none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
     }
 
     #contact {
@@ -249,8 +287,7 @@ li.menuitem a:hover{
         border:none;
         width:100%;
     }
-    /* REMINDER... this is the WIDE layout
-     */
+    /* REMINDER... this is the WIDE layout */
     #menulist {
         list-style-type: none;
         font-family:sans-serif;
@@ -264,6 +301,7 @@ li.menuitem a:hover{
         background-color:black;
         color:white;
     }
+    /*
     li.icon {
         display:block;
         text-align:left;
@@ -281,12 +319,13 @@ li.menuitem a:hover{
         margin:5px;
         padding:5px;
     }
+    */
 }
 
 
-/* Table properties
- */
+/* Table properties */
 
+/*
 table.texttable {
     border: 2px solid black;
     border-radius: 20px;
@@ -297,12 +336,11 @@ table.texttable {
 td {
     padding: 10px;
 }
+*/
 
+/* Live formatting rules */
 
-/* Live formatting rules
- *
- */
-
+/*
 .lcol {
     width:300px;
     float:left;
@@ -366,3 +404,4 @@ td.tdDR {
 #sec2 {
     width: 800px;
 }
+*/
